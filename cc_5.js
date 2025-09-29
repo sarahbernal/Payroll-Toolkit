@@ -16,7 +16,7 @@ function calculateBasePay(rate,hours) {
     return baseHours * rate;
 }
 
-//Step 4: Calculate Overtime Pay
+//Step 4: calculateOvertimePay
 function calculateOvertimePay(rate,hours) {
     let OvertimePay;
     if (hours > 40) {
@@ -27,13 +27,13 @@ function calculateOvertimePay(rate,hours) {
     return OvertimePay * rate * 1.5
 }
 
-//Step 5: Calculate Taxes
+//Step 5: calculateTaxes
 function calculateTaxes(grossPay) {
     let taxAmount = grossPay * 0.15;
     return taxAmount
 }
 
-//Step 6: Process payroll
+//Step 6: processPayroll
 function processPayroll(employee) {
     let basePay = calculateBasePay(employee.hourlyRate, employee.hoursWorked);
     let OvertimePay = calculateOvertimePay(employee.hourlyRate, employee.hoursWorked);
